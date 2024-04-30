@@ -1,0 +1,67 @@
+
+  .inputDiv {
+    height: 32px;
+    width: 545px;
+    border: 0px;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .input {
+    display: flex;
+  }
+  
+  .inputIcon {
+    background: #fff;
+    width: 25px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .inputIcon i {
+    margin-left: 6px;
+  }
+
+  .inputType input {
+    width: 520px;
+    height: 32px;
+    padding: 8px;
+    outline: none;
+    border: 0px;
+  }
+  
+  .inputDiv .animation {
+    animation-name: inputSpread;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes inputSpread {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 520px;
+    }
+  }
+  
+  .filteredCities {
+    margin-top: 10px;
+    width: 545px;
+  }
+  
+  .filteredCities div {
+    font-size: 15px;
+    display: flex;
+    height: 30px;
+    outline: none;
+    background: #fff;
+    padding: 3px;
+  }
+  
+  .filteredCities div:hover {
+    color: rgba(255, 255, 255, 1);
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }

@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.weatherCard {
+  width: 950px;
+  height: 550px;
+  outline: none;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  display: grid;
+  grid-template-rows: 3.2fr 1.3fr 2.6fr;
+  gap: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.weatherDataContainer,
+.weatherIconsContainer {
+  display: grid;
+  grid-template-columns: 2fr 3.5fr;
+  column-gap: 35px;
+}
+
+.time,
+.dateAndPlace,
+.weekForecast,
+.forecastByHour {
+  backdrop-filter: saturate(80%) blur(7px);
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3rem 0px;
+  border-radius: 15px;
+  border: 0px solid white;
+}
+
+.weatherDataRight {
+  display: grid;
+  grid-template-rows: 2fr 3fr;
+  row-gap: 20px;
+}
+
+.locationInfo {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  column-gap: 35px;
+}
+

@@ -1,0 +1,25 @@
+.forecastByHour {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.byHour {
+text-align: center;
+border-right: 1px solid rgba(255, 255, 255, 0.7);
+padding: 11px;
+}
+
+.byHours:nth-child(13) {
+  border: none;
+}
+
+.hoursImg {
+    width: 50px;
+    height: 30px;
+    margin: 8px 0px 8px 0px;
+    & img {
+        width: 60%;
+        height: 90%;
+    }
+}

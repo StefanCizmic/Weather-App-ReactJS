@@ -1,0 +1,41 @@
+.currentConditions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.conditions {
+  height: 70px;
+  width: 80px;
+  border-radius: 25px;
+  backdrop-filter: saturate(80%) blur(7px);
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3rem 0px;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+}
+
+.conditions:nth-child(2) {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 170, 255, 0.5),
+    rgba(0, 255, 170, 0.5)
+  );
+  border: 1px solid rgba(0, 0, 0, 0.55);
+}
+
+.conditionsLogo {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.conditions p {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.conditions:nth-child(2) p, .climate:nth-child(3) p {
+  margin-left: 6px;
+}

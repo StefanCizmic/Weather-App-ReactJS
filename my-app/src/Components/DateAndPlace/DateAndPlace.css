@@ -1,0 +1,31 @@
+.dateAndPlace {
+  display: grid;
+  grid-template-rows: 1.5fr 1.7fr;
+  padding-top: 7px;
+}
+
+.dateAndPlace .cityAndCountry {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 17px;
+  margin-left: 15px;
+}
+
+.cityAndCountry span {
+  color: #000;
+  background-color: #48aaad;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.date {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 17px;
+  position: relative;
+}
+
+

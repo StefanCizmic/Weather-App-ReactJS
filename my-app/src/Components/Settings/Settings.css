@@ -1,0 +1,41 @@
+.settingsContainer {
+    width: 400px;
+    height: 250px;
+    padding: 50px 45px;
+    background: rgba(59, 59, 59, 0.8);
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    animation: fadeIn 1.6s ease-in-out forwards;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .settingsContainer h2 {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+  
+  .unitButtons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .unitButtons button {
+    width: 110px;
+    height: 50px;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .unitButtons button:hover {
+    background-color: #acd8a5;
+    color: #595959;
+  }
+  
