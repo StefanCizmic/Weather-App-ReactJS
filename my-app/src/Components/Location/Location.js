@@ -33,6 +33,7 @@ const Location = ({ currentLocation }) => {
         <div className="errorMessage">
           <h2>Error</h2>
           <p>Failed to load map. Please allow access to your location</p>
+          <p>a</p>
         </div>
       )}
     </SidebarLayout>
