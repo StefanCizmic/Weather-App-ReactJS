@@ -18,7 +18,7 @@ export const currentForecastIcon = (weather) => {
 
   const weatherCondition = weather?.current?.weather[0]?.main;
 
-  if (currentTime <= sunrise) {
+  if (currentTime <= sunrise || currentTime >= sunset) {
     return <img src={moonIcon} alt="moonIcon" />;
   } else {
     switch (weatherCondition) {
