@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./CurrentConditions.css";
+import { WeatherContext } from "../Weather/Weather";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWind, faDroplet, faCloud } from "@fortawesome/free-solid-svg-icons";
 
-const CurrentConditions = ({ weather }) => {
+const CurrentConditions = () => {
   
+  const weather = useContext(WeatherContext)
   const conditionsData = [
     {
       name: "wind",

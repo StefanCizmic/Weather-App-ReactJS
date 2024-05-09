@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import "./Weather.css";
 import { localDateTime } from "../../Util/localDateTime";
 import { dailyForecast } from "../../Util/dailyForecast";
@@ -10,6 +10,8 @@ import WeeklyDays from "../WeeklyDays/WeeklyDays";
 import WeeklyForecast from "../WeeklyForecast/WeeklyForecast";
 import ForecastByHour from "../ForecastByHour/ForecastByHour";
 
+export const WeatherContext = createContext();
+
 const Weather = ({ weather, city, measurement }) => {
 
   const [dailyTemp, setDailyTemp] = useState(dailyForecast(weather, 0));
@@ -20,23 +22,25 @@ const Weather = ({ weather, city, measurement }) => {
 
   return (
     <div>
+      <WeatherContext.Provider value={weather}>
       <div className="weatherCard">
         <div className="weatherDataContainer">
-          <CurrentForecast weather={weather} measurement={measurement}/>
+          <CurrentForecast measurement={measurement}/>
           <div className="weatherDataRight">
             <div className="locationInfo">
-              <Time weather={weather} />
-              <DateAndPlace weather={weather} city={city} />
+              <Time />
+              <DateAndPlace city={city} />
             </div>
             <WeeklyForecast dailyTemp={dailyTemp} measurement={measurement}/>
           </div>
         </div>
         <div className="weatherIconsContainer">
-          <CurrentConditions weather={weather} />
-          <WeeklyDays weather={weather} setDailyTemp={setDailyTemp} />
+          <CurrentConditions />
+          <WeeklyDays setDailyTemp={setDailyTemp} />
         </div>
-        <ForecastByHour weather={weather} measurement={measurement}/>
+        <ForecastByHour measurement={measurement}/>
       </div>
+      </WeatherContext.Provider>
     </div>
   );
 };

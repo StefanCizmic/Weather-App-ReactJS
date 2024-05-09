@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./CurrentForecast.css";
 import { currentForecastIcon } from "../../Util/currentForecastIcon";
+import {WeatherContext} from '../Weather/Weather'
 
-const CurrentForecast= ({ weather, measurement }) => {
+const CurrentForecast= ({measurement}) => {
+
+  const weather = useContext(WeatherContext);
 
   return (
     <div className="currentForecast">

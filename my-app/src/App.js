@@ -86,8 +86,6 @@ const App = () => {
     navigator.geolocation.getCurrentPosition(success);
   }, []);
 
-  console.log(currentLocation);
-
   const backgroundRef = useRef(null);
 
   return (

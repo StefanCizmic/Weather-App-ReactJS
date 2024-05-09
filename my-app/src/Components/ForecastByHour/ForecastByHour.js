@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./ForecastByHour.css";
+import {WeatherContext} from '../Weather/Weather';
 import { hoursOrder } from "../../Util/hoursOrder";
 import { forecastByHourIcon } from "../../Util/forecastByHourIcon";
 
-const ForecastByHour = ({ weather, measurement }) => {
+const ForecastByHour = ({measurement }) => {
   
+  const weather = useContext(WeatherContext);
   const hours = hoursOrder(weather?.timezone_offset);
 
   const dataByHour = [

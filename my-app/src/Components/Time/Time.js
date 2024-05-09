@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {localDateTime} from '../../Util/localDateTime';
+import {WeatherContext} from '../Weather/Weather';
 import "./Time.css";
 
-const Time = ({ weather }) => {
+const Time = () => {
   
+  const weather = useContext(WeatherContext);
   const [local, setLocal] = useState('');
   
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const localTime = localDateTime(weather.timezone_offset).time;
+      const localTime = localDateTime(weather?.timezone_offset).time;
       setLocal(localTime);
     }, 1000);
     return () => clearInterval(intervalId);

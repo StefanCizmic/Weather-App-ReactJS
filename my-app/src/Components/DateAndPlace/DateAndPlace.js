@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { localDateTime } from '../../Util/localDateTime';
+import {WeatherContext} from '../Weather/Weather';
 import './DateAndPlace.css';
 
-const DateAndPlace = ({ weather, city}) => {
+const DateAndPlace = ({city}) => {
     
+    const weather = useContext(WeatherContext)
     const currentDate = localDateTime(weather?.timezone_offset).date;
     const currentDay = localDateTime(weather?.timezone_offset).day;
 

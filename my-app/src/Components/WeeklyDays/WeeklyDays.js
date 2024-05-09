@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./WeeklyDays.css";
+import { WeatherContext } from "../Weather/Weather";
 import { daysOrder } from "../../Util/daysOrder";
 import { forecastByDaysIcon } from "../../Util/forecastByDaysIcon";
 import { dailyForecast } from "../../Util/dailyForecast";
 
-const WeeklyDays = ({ weather, setDailyTemp }) => {
+const WeeklyDays = ({ setDailyTemp }) => {
   
+  const weather = useContext(WeatherContext);
   const [weekDays, setWeekDays] = useState([]);
 
   const weeklyData = [
