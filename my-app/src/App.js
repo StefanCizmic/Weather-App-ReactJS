@@ -9,6 +9,7 @@ import { unixTimestamp } from "./Util/unixTimestamp";
 import Location from "./Components/Location/Location";
 import Settings from "./Components/Settings/Settings";
 import AboutMe from "./Components/AboutMe/AboutMe";
+import img from './Images/Backgrounds/clear.avif'
 
 const cards = ({
   setData,
@@ -69,6 +70,7 @@ const App = () => {
         latitude: coords.latitude,
         longitude: coords.longitude,
       };
+      if (currentPosition) {
       setCurrentLocation(currentPosition);
       const currentData = await getWeather(currentPosition);
       if (currentData) {
@@ -82,6 +84,9 @@ const App = () => {
         );
         setCurrentTimestamp(timeOfDay);
       }
+    } else {
+      backgroundRef.current.style.backgroundImage = `url(${img})`;
+    }
     };
     navigator.geolocation.getCurrentPosition(success);
   }, []);

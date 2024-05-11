@@ -23,7 +23,7 @@
   align-items: center;
   cursor: pointer;
   opacity: 0; 
-  animation: fadeIn 1.6s ease-in-out forwards; 
+  animation: fadeIn 0.8s ease-in-out forwards; 
   background: rgba(59, 59, 59, 0.8);
   & img {
     width: 100%;
@@ -42,4 +42,3 @@
     rgba(255, 255, 0, 0.5)
   );
 }
-

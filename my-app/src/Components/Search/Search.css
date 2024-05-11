@@ -33,7 +33,7 @@
   
   .inputDiv .animation {
     animation-name: inputSpread;
-    animation-duration: 1.6s;
+    animation-duration: 1.3s;
     animation-timing-function: ease-in-out;
   }
   

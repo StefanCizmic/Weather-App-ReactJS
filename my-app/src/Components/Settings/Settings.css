@@ -5,7 +5,7 @@
     background: rgba(59, 59, 59, 0.8);
     color: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
-    animation: fadeIn 1.6s ease-in-out forwards;
+    animation: fadeIn 0.8s ease-in-out forwards;
     font-family: "Montserrat", sans-serif;
   }
   

@@ -4,7 +4,7 @@
     width: 900px;
     border-radius: 15px;
     opacity: 0; 
-    animation: fadeIn 1.7s ease forwards; 
+    animation: fadeIn 1.2s ease forwards; 
     box-shadow: 0px 0px 45px rgba(0, 0, 0, 1)
 }
 
