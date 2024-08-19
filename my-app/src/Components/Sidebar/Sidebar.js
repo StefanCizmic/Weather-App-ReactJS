@@ -42,9 +42,8 @@ const Sidebar = ({ setCardIsOpen }) => {
       {sidebarData.map(item => (
         <div className="sidebarItem" key={item.id} onClick={() => setCardIsOpen(item.openCard)}>
           <div>
-            <FontAwesomeIcon icon={item.icon}/>
+            <FontAwesomeIcon icon={item.icon}/> 
           </div>
-          <span>{item.description}</span>
         </div>
       ))}
     </div>

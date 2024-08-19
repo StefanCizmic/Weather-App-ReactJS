@@ -42,3 +42,7 @@
     rgba(255, 255, 0, 0.5)
   );
 }
+
+.iconContainer:nth-child(2) {
+  background: RGBA(10, 102, 194, 0.95)
+}

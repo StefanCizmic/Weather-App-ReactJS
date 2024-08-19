@@ -96,7 +96,7 @@ const App = () => {
   return (
     <div id="rootDiv">
       <div className="background" ref={backgroundRef}>
-        <Sidebar
+        <Sidebar className='sidebar'
           setCardIsOpen={setCardIsOpen}
           currentTimestamp={currentTimestamp}
         />

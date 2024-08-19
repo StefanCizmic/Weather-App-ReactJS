@@ -6,7 +6,6 @@ import "./Search.css";
 import cities from "cities.json";
 
 const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
-  
   const [filteredCities, setFilteredCities] = useState([]);
 
   const inputHandlerFunction = (e) => {
@@ -39,44 +38,40 @@ const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
   return (
     <div className="inputDiv">
       <div className="input">
-        <div className="inputIcon">
-          <i>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </i>
-        </div>
-        <div className="inputType">
-          <input
-            type="text"
-            placeholder="type city"
-            ref={inputRef}
-            onChange={inputHandlerFunction}
-            onKeyDown={(e) =>
-              e?.key === "Enter" && filteredCities.length > 0
-                ? handleSearch({
-                    latitude: filteredCities[0].lat,
-                    longitude: filteredCities[0].lng,
-                  }) &&
-                  setCity({
-                    city: filteredCities[0].name,
-                    country: filteredCities[0].country,
-                  })
-                : null
-            }
-          ></input>
-        </div>
+        <input
+          className="inputSearch"
+          type="text"
+          placeholder="type city"
+          ref={inputRef}
+          onChange={inputHandlerFunction}
+          onKeyDown={(e) =>
+            e?.key === "Enter" && filteredCities.length > 0
+              ? handleSearch({
+                  latitude: filteredCities[0].lat,
+                  longitude: filteredCities[0].lng,
+                }) &&
+                setCity({
+                  city: filteredCities[0].name,
+                  country: filteredCities[0].country,
+                })
+              : null
+          }
+        ></input>
       </div>
-      <div className="filteredCities">
-        {filteredCities.map((city) => (
-          <div
-            onClick={() =>
-              handleSearch({ latitude: city?.lat, longitude: city?.lng }) &&
-              setCity({ city: city?.name, country: city?.country })
-            }
-            key={city?.id}
-          >
-            {city?.name}, {city?.country}
-          </div>
-        ))}
+      <div className="filteredDiv">
+        <div className="filteredCities">
+          {filteredCities.map((city) => (
+            <div
+              onClick={() =>
+                handleSearch({ latitude: city?.lat, longitude: city?.lng }) &&
+                setCity({ city: city?.name, country: city?.country })
+              }
+              key={city?.id}
+            >
+              {city?.name}, {city?.country}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

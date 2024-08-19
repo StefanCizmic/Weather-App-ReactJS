@@ -1,6 +1,6 @@
 .sidebar {
   height: 100vh;
-  width: 4.5%;
+  /* width: 4.5%; */
   color: #fff;
   background: rgba(0, 0, 0, 0.2);
   transition: width 750ms;
@@ -15,24 +15,27 @@
 
 .sidebarItem {
   height: 25%;
+  max-width: 100%;
   line-height: 130px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   transition: border 0.5s, background 0.5s;
 }
 
 
-.sidebarItem span {
+/* .sidebarItem span {
   position: absolute;
-  left: 80px;
-  top: 20px;
+  left: 120px;
+  top: 30px;
   transition: color 1s;
   color: rgba(255, 255, 255, 0);
 }
 
 .sidebar:hover .sidebarItem span {
   color: rgba(255, 255, 255, 1);
-}
+} */
 
 
 .sidebarItem:hover {
@@ -40,5 +43,3 @@
   background: #acd8a7;
   cursor: pointer;
 }
-
-
