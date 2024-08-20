@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,10 +6,11 @@ import {
   faLocationArrow,
   faGear,
   faAddressCard,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = ({ setCardIsOpen }) => {
-  
+  const [isOpen, setIsOpen] = useState(false);
   const sidebarData = [
     {
       id: 1,
@@ -38,11 +39,24 @@ const Sidebar = ({ setCardIsOpen }) => {
   ];
 
   return (
-    <div className="sidebar">
-      {sidebarData.map(item => (
-        <div className="sidebarItem" key={item.id} onClick={() => setCardIsOpen(item.openCard)}>
+    <div className={isOpen ? "sidebar open" : "sidebar"}>
+      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        <FontAwesomeIcon icon={faBars} />
+        <ul className={isOpen ? "listsOpen" : "lists"}>
+          <li onClick={() => setCardIsOpen("searchCard")}>Home</li>
+          <li onClick={() => setCardIsOpen("locationCard")}>Location</li>
+          <li onClick={() => setCardIsOpen("settingsCard")}>Settings</li>
+          <li onClick={() => setCardIsOpen("aboutMeCard")}>About Me</li>
+        </ul>
+      </div>
+      {sidebarData.map((item) => (
+        <div
+          className="sidebarItem"
+          key={item.id}
+          onClick={() => setCardIsOpen(item.openCard)}
+        >
           <div>
-            <FontAwesomeIcon icon={item.icon}/> 
+            <FontAwesomeIcon icon={item.icon} />
           </div>
         </div>
       ))}

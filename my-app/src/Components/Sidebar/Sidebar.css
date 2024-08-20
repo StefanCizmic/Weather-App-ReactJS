@@ -1,12 +1,11 @@
 .sidebar {
   height: 100vh;
-  /* width: 4.5%; */
   color: #fff;
   background: rgba(0, 0, 0, 0.2);
-  transition: width 750ms;
   overflow: hidden;
   z-index: 99;
   box-shadow: inset -8px 0px 16px -6px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease-in-out;
 }
 
 .sidebar:hover {
@@ -24,22 +23,66 @@
   transition: border 0.5s, background 0.5s;
 }
 
-
-/* .sidebarItem span {
+.hamburger {
+  visibility: hidden;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
   position: absolute;
-  left: 120px;
-  top: 30px;
-  transition: color 1s;
-  color: rgba(255, 255, 255, 0);
+  top: 20px;
+  left: 20px;
+  z-index: 100;
 }
 
-.sidebar:hover .sidebarItem span {
-  color: rgba(255, 255, 255, 1);
-} */
-
-
 .sidebarItem:hover {
-  /* background: #000; */
   background: #acd8a7;
   cursor: pointer;
+}
+
+.lists {
+  display: none;
+}
+
+.listsOpen {
+  list-style-type: none;
+  font-size: 17px;
+  margin-top: 15px;
+  margin-left: -50px;
+}
+
+.listsOpen li {
+  padding: 12px 0px;
+}
+
+.listsOpen li:hover {
+  color: #acd8a7;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 65px;
+    background: rgba(0, 0, 0, 0);
+  }
+  .sidebar:hover {
+    width: 65px;
+  }
+  .sidebar.open {
+    width: 110px;
+  }
+  .hamburger {
+    visibility: visible;
+    left: 14px;
+  }
+  .sidebarItem {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar.open {
+    width: 120px;
+  }
+  .hamburger {
+    left: 10px;
+  }
 }

@@ -1,24 +1,37 @@
-
 .leaflet-container {
-    height: 450px;
-    width: 900px;
-    border-radius: 15px;
-    opacity: 0; 
-    animation: fadeIn 1.2s ease forwards; 
-    box-shadow: 0px 0px 45px rgba(0, 0, 0, 1)
+  height: 450px;
+  width: 900px;
+  border-radius: 15px;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  box-shadow: 0px 0px 45px rgba(0, 0, 0, 1);
 }
 
 .errorMessage {
-    width: 400px;
-    height: 250px;
-    padding: 50px 45px;
-    background: rgba(59, 59, 59, 0.8);
-    border-radius: 15px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    color: rgba(255, 255, 255, 0.7);
+  width: 400px;
+  height: 250px;
+  padding: 50px 45px;
+  background: rgba(59, 59, 59, 0.8);
+  border-radius: 15px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .errorMessage p {
-    margin-top: 15px;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .leaflet-container {
+    width: 360px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaflet-container {
+    width: 300px;
+    height: 200px;
+  }
 }

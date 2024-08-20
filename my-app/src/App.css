@@ -21,10 +21,11 @@
   align-items: center;
 }
 
+.sidebarResponsive {
+  visibility: hidden;
+}
+
 @media (max-width: 768px) {
-  .sidebar {
-    visibility: hidden;
-  }
   .secondDiv {
     width: 100%;
   }

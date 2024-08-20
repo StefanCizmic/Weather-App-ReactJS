@@ -15,6 +15,7 @@
   height: 30px;
   outline: 0px;
   border: 0px;
+  padding-left: 10px;
 }
 
 .inputDiv .animation {
@@ -59,7 +60,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 480px) {
   .inputDiv {
     width: 280px;
   }
@@ -71,11 +72,11 @@
 
 @media (min-width: 480px) and (max-width: 768px) {
   .inputDiv {
-    width: 380px;
+    width: 350px;
     height: 230px;
   }
   .filteredCities div,
   .input input {
-    width: 380px;
+    width: 350px;
   }
 }
