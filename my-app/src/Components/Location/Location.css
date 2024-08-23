@@ -22,16 +22,23 @@
   margin-top: 15px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .leaflet-container {
     width: 360px;
     height: 250px;
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 401px) and (max-width: 480px) {
   .leaflet-container {
-    width: 300px;
-    height: 200px;
+    width: 260px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 400px) {
+  .leaflet-container {
+    width: 180px;
+    height: 140px;
   }
 }

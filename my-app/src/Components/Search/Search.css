@@ -60,16 +60,6 @@
   cursor: pointer;
 }
 
-@media (max-width: 480px) {
-  .inputDiv {
-    width: 280px;
-  }
-  .filteredCities div,
-  .input input {
-    width: 280px;
-  }
-}
-
 @media (min-width: 480px) and (max-width: 768px) {
   .inputDiv {
     width: 350px;
@@ -80,3 +70,23 @@
     width: 350px;
   }
 }
+
+@media (min-width: 401px) and (max-width: 480px) {
+  .inputDiv {
+    width: 250px;
+  }
+  .filteredCities div,
+  .input input {
+    width: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  .inputDiv {
+    width: 160px;
+  }
+  .filteredCities div,
+  .input input {
+    width: 160px;
+  }
+} 

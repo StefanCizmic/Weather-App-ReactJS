@@ -2,7 +2,7 @@ import React from "react";
 import SidebarLayout from "../SidebarLayout/SidebarLayout";
 import "./Settings.css";
 
-const Settings = ({setUnits, setMeasurement, setCardIsOpen}) => {
+const Settings = ({setUnits, setCardIsOpen}) => {
   
   return (
     <SidebarLayout>

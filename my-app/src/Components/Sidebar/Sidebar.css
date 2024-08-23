@@ -58,7 +58,7 @@
   color: #acd8a7;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .sidebar {
     width: 65px;
     background: rgba(0, 0, 0, 0);
@@ -78,11 +78,47 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 401px) and (max-width: 480px) {
+  .sidebar {
+    width: 65px;
+    background: rgba(0, 0, 0, 0);
+  }
+  .sidebar:hover {
+    width: 65px;
+  }
   .sidebar.open {
     width: 120px;
   }
   .hamburger {
+    visibility: visible;
     left: 10px;
+  }
+  .sidebarItem {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 30px;
+    background: rgba(0, 0, 0, 0);
+  }
+  .sidebar:hover {
+    width: 30px;
+  }
+  .sidebar.open {
+    width: 80px;
+  }
+  .sidebar.open li {
+    font-size: 5px;
+    padding-left: 5px;
+  }
+  .hamburger {
+    font-size: 17px;
+    visibility: visible;
+    left: -4px;
+  }
+  .sidebarItem {
+    visibility: hidden;
   }
 }
