@@ -107,11 +107,11 @@
     width: 30px;
   }
   .sidebar.open {
-    width: 80px;
+    width: 70px;
   }
   .sidebar.open li {
-    font-size: 5px;
-    padding-left: 5px;
+    font-size: 14px;
+    padding-left: 8px;
   }
   .hamburger {
     font-size: 17px;

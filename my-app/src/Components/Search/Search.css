@@ -69,6 +69,9 @@
   .input input {
     width: 350px;
   }
+  .filteredCities div{
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 401px) and (max-width: 480px) {
@@ -79,6 +82,9 @@
   .input input {
     width: 250px;
   }
+  .filteredCities div{
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -88,5 +94,8 @@
   .filteredCities div,
   .input input {
     width: 160px;
+  }
+  .filteredCities div{
+    font-size: 14px;
   }
 } 

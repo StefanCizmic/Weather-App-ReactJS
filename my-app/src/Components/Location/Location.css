@@ -22,6 +22,13 @@
   margin-top: 15px;
 }
 
+@media (min-width: 769px) and (max-width: 1150px) {
+  .leaflet-container {
+    width: 500px;
+    height: 350px;
+  }
+}
+
 @media (min-width: 481px) and (max-width: 768px) {
   .leaflet-container {
     width: 360px;
