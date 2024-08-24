@@ -20,3 +20,7 @@
   .forecastLeft div p, .forecastRight div p {
     margin-bottom: 1.5px;
   }
+
+  @media (max-width: 768px) {
+  
+  }

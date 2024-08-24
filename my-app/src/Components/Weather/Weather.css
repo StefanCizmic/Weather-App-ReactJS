@@ -42,3 +42,37 @@
   column-gap: 35px;
 }
 
+@media (max-width: 768px) {
+  .weatherCard {
+    width: 200px;
+    height: 300px;
+    margin-left: -300px;
+    margin-bottom: 250px;
+  }
+  .weatherDataContainer {
+    display: grid;
+    height: 400px;
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .locationInfo {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .weatherDataContainer {
+    display: block;
+    /* grid-template-rows: 1.5fr 1.2fr;
+    gap: 0px; */
+  }
+  .currentForecast, .weatherDataRight {
+    width: 600px;
+  }
+  .locationInfo {
+    display: none;
+  }
+  .weatherDataRight {
+    display: none;
+  }
+}

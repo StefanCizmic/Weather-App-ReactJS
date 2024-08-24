@@ -25,7 +25,7 @@ const Weather = ({ weather, city, measurement }) => {
       <WeatherContext.Provider value={weather}>
       <div className="weatherCard">
         <div className="weatherDataContainer">
-          <CurrentForecast measurement={measurement}/>
+          <CurrentForecast measurement={measurement} city={city}/>
           <div className="weatherDataRight">
             <div className="locationInfo">
               <Time />
