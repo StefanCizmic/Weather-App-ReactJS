@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import "./CurrentForecast.css";
-import { currentForecastIcon } from "../../Util/currentForecastIcon";
+import { currentForecastIcon } from "../../Util/getCurrentForecastIcon";
 import { WeatherContext } from "../Weather/Weather";
-import { localDateTime } from '../../Util/localDateTime';
+import { localDateTime } from '../../Util/getLocalDateTime';
 
 const CurrentForecast = ({ measurement, city }) => {
   const weather = useContext(WeatherContext);
@@ -17,7 +17,7 @@ const CurrentForecast = ({ measurement, city }) => {
             <p>
               {city.city}, {city.country}
             </p>
-            <p>
+            <p className="responstemp">
               {Math.round(weather?.current?.temp)}
               {measurement}
             </p>

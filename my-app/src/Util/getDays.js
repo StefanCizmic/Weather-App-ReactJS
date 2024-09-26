@@ -1,5 +1,5 @@
 
-import {localDateTime} from './localDateTime';
+import {localDateTime} from './getLocalDateTime';
 
 export const daysOrder = (weather) => {
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];

@@ -1,21 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useScreenWidth } from "../../Hooks/useScreenWidth";
 import { getWeather } from "../../Util/Fetch/getWeather";
+import { getFilteredCities } from '../../Util/getFilteredCities';
 import "./Search.css";
-import cities from "cities.json";
 
 const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
   const [filteredCities, setFilteredCities] = useState([]);
+  const screenWidth = useScreenWidth();
+  const inputRef = useRef(null);
 
-  const inputHandlerFunction = (e) => {
+  const inputHandler = (e) => {
     const typedText = e.target.value.toLowerCase();
-    if (typedText.length > 2) {
-      const filtered = cities
-        .filter((city) => city.name.toLowerCase().startsWith(typedText))
-        .slice(0, 6);
-      setFilteredCities(filtered);
-    } else {
-      setFilteredCities([]);
-    }
+    getFilteredCities(typedText, setFilteredCities, screenWidth); 
   };
 
   const handleSearch = async (coordinates) => {
@@ -26,12 +22,15 @@ const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
     }
   };
 
-  const inputRef = useRef(null);
   useEffect(() => {
     const input = inputRef.current;
-    input.classList.add("animation");
-    input.focus();
-  }, []);
+    if (input) {
+      input.classList.add("animation");
+      if (screenWidth > 768) { 
+        input.focus();
+      }
+    }
+  }, [screenWidth]); 
 
   return (
     <div className="inputDiv">
@@ -41,32 +40,31 @@ const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
           type="text"
           placeholder="type city"
           ref={inputRef}
-          onChange={inputHandlerFunction}
+          onChange={inputHandler}
           onKeyDown={(e) =>
-            e?.key === "Enter" && filteredCities.length > 0
+            e.key === "Enter" && filteredCities.length > 0
               ? handleSearch({
                   latitude: filteredCities[0].lat,
                   longitude: filteredCities[0].lng,
-                }) &&
-                setCity({
+                }) && setCity({
                   city: filteredCities[0].name,
                   country: filteredCities[0].country,
                 })
               : null
           }
-        ></input>
+        />
       </div>
       <div className="filteredDiv">
         <div className="filteredCities">
           {filteredCities.map((city) => (
             <div
-              onClick={() =>
-                handleSearch({ latitude: city?.lat, longitude: city?.lng }) &&
-                setCity({ city: city?.name, country: city?.country })
-              }
-              key={city?.id}
+              onClick={() => {
+                handleSearch({ latitude: city.lat, longitude: city.lng });
+                setCity({ city: city.name, country: city.country });
+              }}
+              key={city.id}
             >
-              {city?.name}, {city?.country}
+              {city.name}, {city.country}
             </div>
           ))}
         </div>

@@ -1,5 +1,5 @@
-import { localDateTime } from "./localDateTime";
-import { unixTimestamp } from "./unixTimestamp";
+import { localDateTime } from "./getLocalDateTime";
+import { unixTimestamp } from "./getUnixTimestamp";
 import moonIcon from "../Images/Icons/moonIcon.png";
 import sunIcon from "../Images/Icons/sunIcon.png";
 import cloudsIcon from "../Images/Icons/cloudsIcon.png";

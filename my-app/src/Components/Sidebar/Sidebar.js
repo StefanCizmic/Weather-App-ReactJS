@@ -1,43 +1,12 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
+import {sidebar} from '../../Data/sidebar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faLocationArrow,
-  faGear,
-  faAddressCard,
-  faBars,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = ({ setCardIsOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const sidebarData = [
-    {
-      id: 1,
-      openCard: "searchCard",
-      icon: faHouse,
-      description: "Home",
-    },
-    {
-      id: 2,
-      openCard: "locationCard",
-      icon: faLocationArrow,
-      description: "Location",
-    },
-    {
-      id: 3,
-      openCard: "settingsCard",
-      icon: faGear,
-      description: "Settings",
-    },
-    {
-      id: 4,
-      openCard: "aboutMeCard",
-      icon: faAddressCard,
-      description: "About Me",
-    },
-  ];
-
+  const sidebarData = sidebar();
   return (
     <div className={isOpen ? "sidebar open" : "sidebar"}>
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
@@ -58,6 +27,7 @@ const Sidebar = ({ setCardIsOpen }) => {
           <div>
             <FontAwesomeIcon icon={item.icon} />
           </div>
+          <p className="itemDescription">{item.description}</p>
         </div>
       ))}
     </div>

@@ -1,32 +1,12 @@
 import React from "react";
 import "./AboutMe.css";
 import SidebarLayout from "../SidebarLayout/SidebarLayout";
+import { aboutMe } from '../../Data/aboutMe';
+import { useScreenWidth } from "../../Hooks/useScreenWidth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedinIn,
-  faUpwork,
-} from "@fortawesome/free-brands-svg-icons";
 
 const AboutMe = () => {
-  const icons = [
-    {
-      name: "github",
-      icon: faGithub,
-      url: "https://github.com/StefanCizmic?tab=repositories",
-    },
-    {
-      name: "linkedin",
-      icon: faLinkedinIn,
-      url: "https://www.linkedin.com/in/stefan-%C4%8Dizmi%C4%87-77a90a24a/",
-    },
-    {
-      name: "upwork",
-      icon: faUpwork,
-      url: "https://www.upwork.com/freelancers/~0119c0b8efbe2e8822",
-    },
-  ];
-
+  const screenWidth = useScreenWidth();
   const openSite = (url) => {
     window.open(url, "_blank", "noreferrer");
   };
@@ -34,7 +14,7 @@ const AboutMe = () => {
   return (
     <SidebarLayout>
       <div className="aboutContainer">
-        {icons.map((item) => (
+        {aboutMe.map((item) => (
           <div
             className="iconContainer"
             key={item.name}
@@ -42,8 +22,9 @@ const AboutMe = () => {
           >
             <div className="icon">
               <FontAwesomeIcon
+                className="aboutIcons"
                 icon={item.icon}
-                style={{color: 'white', fontSize: "110px"}}
+                style={{color: 'white', fontSize: screenWidth < 1150 ? "35px" : "110px"}}
               />
             </div>
           </div>

@@ -62,7 +62,7 @@
 
 @media (min-width: 480px) and (max-width: 768px) {
   .inputDiv {
-    width: 350px;
+    width: 320px;
     height: 230px;
   }
   .filteredCities div,
@@ -74,20 +74,20 @@
   }
 }
 
-@media (min-width: 401px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .inputDiv {
-    width: 250px;
+    width: 210px;
   }
   .filteredCities div,
   .input input {
-    width: 250px;
+    width: 210px;
   }
   .filteredCities div{
     font-size: 14px;
   }
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   .inputDiv {
     width: 160px;
   }
@@ -98,4 +98,4 @@
   .filteredCities div{
     font-size: 14px;
   }
-} 
+}  */

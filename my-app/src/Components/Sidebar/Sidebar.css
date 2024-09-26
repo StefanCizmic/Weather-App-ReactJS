@@ -1,5 +1,6 @@
 .sidebar {
   height: 100vh;
+  width: 120px;
   color: #fff;
   background: rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -19,8 +20,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
   transition: border 0.5s, background 0.5s;
+}
+
+.itemDescription {
+  margin-left: 12px;
 }
 
 .hamburger {
@@ -78,47 +83,28 @@
   }
 }
 
-@media (min-width: 401px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .sidebar {
-    width: 65px;
+    width: 55px;
     background: rgba(0, 0, 0, 0);
   }
   .sidebar:hover {
-    width: 65px;
+    width: 55px;
   }
   .sidebar.open {
-    width: 120px;
+    width: 85px;
+  }
+  .sidebar.open li {
+    font-size: 15px;
+    /* padding-left: 6px; */
   }
   .hamburger {
+    font-size: 19px;
     visibility: visible;
-    left: 10px;
+    left: 9px;
   }
   .sidebarItem {
     visibility: hidden;
   }
 }
 
-@media (max-width: 400px) {
-  .sidebar {
-    width: 30px;
-    background: rgba(0, 0, 0, 0);
-  }
-  .sidebar:hover {
-    width: 30px;
-  }
-  .sidebar.open {
-    width: 70px;
-  }
-  .sidebar.open li {
-    font-size: 14px;
-    padding-left: 8px;
-  }
-  .hamburger {
-    font-size: 17px;
-    visibility: visible;
-    left: -4px;
-  }
-  .sidebarItem {
-    visibility: hidden;
-  }
-}

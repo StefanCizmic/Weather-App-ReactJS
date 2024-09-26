@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createContext } from "react";
 import "./Weather.css";
-import { localDateTime } from "../../Util/localDateTime";
-import { dailyForecast } from "../../Util/dailyForecast";
+import { localDateTime } from "../../Util/getLocalDateTime";
+import { dailyForecast } from "../../Util/getDailyForecast";
 import CurrentForecast from "../CurrentForecast/CurrentForecast";
 import Time from "../Time/Time";
 import DateAndPlace from "../DateAndPlace/DateAndPlace";

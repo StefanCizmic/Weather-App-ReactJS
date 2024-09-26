@@ -1,4 +1,4 @@
-import { localDateTime } from "./localDateTime";
+import { localDateTime } from "./getLocalDateTime";
 
 export const hoursOrder = (timezone) => {
   

@@ -42,18 +42,22 @@
   column-gap: 35px;
 }
 
+   /* width: 200px;
+    height: 300px; */
+    /* margin-left: -300px; */
+    /* margin-left: 50px;
+    margin-bottom: 250px; */
+
 @media (max-width: 768px) {
   .weatherCard {
-    width: 200px;
-    height: 300px;
-    margin-left: -300px;
-    margin-bottom: 250px;
+    width: 100%;
+ 
   }
   .weatherDataContainer {
     display: grid;
     height: 400px;
     grid-template-columns: none;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr 0.5fr;
   }
   .locationInfo {
     display: none;
@@ -61,10 +65,11 @@
 }
 
 @media (max-width: 768px) {
+  .weatherCard {
+    justify-self: start;
+  }
   .weatherDataContainer {
-    display: block;
-    /* grid-template-rows: 1.5fr 1.2fr;
-    gap: 0px; */
+    justify-self: center;
   }
   .currentForecast, .weatherDataRight {
     width: 600px;
@@ -72,7 +77,10 @@
   .locationInfo {
     display: none;
   }
-  .weatherDataRight {
+  .weatherDataRight, .weatherIconsContainer {
     display: none;
+  }
+  .forecastByHour {
+    visibility: hidden;
   }
 }

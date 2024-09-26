@@ -1,33 +1,12 @@
 import React, {useContext} from "react";
 import "./CurrentConditions.css";
+import {currentConditions} from '../../Data/currentConditions';
 import { WeatherContext } from "../Weather/Weather";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWind, faDroplet, faCloud } from "@fortawesome/free-solid-svg-icons";
 
 const CurrentConditions = () => {
-  
   const weather = useContext(WeatherContext)
-  const conditionsData = [
-    {
-      name: "wind",
-      icon: faWind,
-      description: weather?.current?.wind_speed,
-      measurement: "km/h",
-    },
-    {
-      name: "humidity",
-      icon: faDroplet,
-      description: weather?.current?.humidity,
-      measurement: "%",
-    },
-    {
-      name: "clouds",
-      icon: faCloud,
-      description: weather?.current?.clouds,
-      measurement: "%",
-    },
-  ];
-
+  const conditionsData = currentConditions(weather);
   return (
     <div className="currentConditions">
       {conditionsData.map((item) => (
@@ -46,5 +25,4 @@ const CurrentConditions = () => {
     </div>
   );
 };
-
 export default CurrentConditions;

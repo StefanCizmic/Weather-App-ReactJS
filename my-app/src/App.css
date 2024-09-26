@@ -2,31 +2,3 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-.background {
-  height: 100vh;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 0.4fr 8fr;
-  background-image: url("./Images/Backgrounds/clear.avif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.secondDiv {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sidebarResponsive {
-  visibility: hidden;
-}
-
-@media (max-width: 768px) {
-  .secondDiv {
-    width: 100%;
-  }
-}

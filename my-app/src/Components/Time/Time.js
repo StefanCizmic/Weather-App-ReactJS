@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import {localDateTime} from '../../Util/localDateTime';
+import {localDateTime} from '../../Util/getLocalDateTime';
 import {WeatherContext} from '../Weather/Weather';
 import "./Time.css";
 

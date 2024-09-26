@@ -7,7 +7,7 @@ import haze from "../Images/Backgrounds/haze.avif";
 import mist from "../Images/Backgrounds/mist.avif";
 import night from "../Images/Backgrounds/night.avif";
 
-export const backgroundImg = (
+export const getBackgroundImg = (
   data,
   backgroundRef,
   sunrise,
