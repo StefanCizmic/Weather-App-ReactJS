@@ -13,22 +13,21 @@
   width: 200px;
 }
 
-.sidebarItem {
+.sidebar-item {
   height: 25%;
   max-width: 100%;
   line-height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 20px; */
   transition: border 0.5s, background 0.5s;
 }
 
-.itemDescription {
+.item-description {
   margin-left: 12px;
 }
 
-.hamburger {
+.hamburger-menu {
   visibility: hidden;
   font-size: 20px;
   cursor: pointer;
@@ -39,7 +38,7 @@
   z-index: 100;
 }
 
-.sidebarItem:hover {
+.sidebar-item:hover {
   background: #acd8a7;
   cursor: pointer;
 }
@@ -48,19 +47,40 @@
   display: none;
 }
 
-.listsOpen {
+.lists.open {
+  display: block;
   list-style-type: none;
   font-size: 17px;
   margin-top: 15px;
   margin-left: -50px;
 }
 
-.listsOpen li {
+.lists.open li {
   padding: 12px 0px;
 }
 
-.listsOpen li:hover {
+.lists.open li:hover {
   color: #acd8a7;
+}
+
+@media (min-width: 769px) and (max-width: 1150px) {
+  .sidebar {
+    width: 90px;
+    background: rgba(0, 0, 0, 0);
+  }
+  .sidebar:hover {
+    width: 90px;
+  }
+  .sidebar.open {
+    width: 130px;
+  }
+  .hamburger-menu {
+    visibility: visible;
+    left: 25px;
+  }
+  .sidebar-item {
+    visibility: hidden;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -74,11 +94,11 @@
   .sidebar.open {
     width: 110px;
   }
-  .hamburger {
+  .hamburger-menu {
     visibility: visible;
     left: 14px;
   }
-  .sidebarItem {
+  .sidebar-item {
     visibility: hidden;
   }
 }
@@ -96,15 +116,13 @@
   }
   .sidebar.open li {
     font-size: 15px;
-    /* padding-left: 6px; */
   }
-  .hamburger {
+  .hamburger-menu {
     font-size: 19px;
     visibility: visible;
     left: 9px;
   }
-  .sidebarItem {
+  .sidebar-item {
     visibility: hidden;
   }
 }
-

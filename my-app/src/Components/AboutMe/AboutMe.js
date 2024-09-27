@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutMe.css";
 import SidebarLayout from "../SidebarLayout/SidebarLayout";
-import { aboutMe } from '../../Data/aboutMe';
+import { aboutMe } from "../../Data/aboutMe";
 import { useScreenWidth } from "../../Hooks/useScreenWidth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -13,18 +13,20 @@ const AboutMe = () => {
 
   return (
     <SidebarLayout>
-      <div className="aboutContainer">
+      <div className="about">
         {aboutMe.map((item) => (
           <div
-            className="iconContainer"
+            className="about-icon-card"
             key={item.name}
             onClick={() => openSite(item.url)}
           >
-            <div className="icon">
+            <div>
               <FontAwesomeIcon
-                className="aboutIcons"
                 icon={item.icon}
-                style={{color: 'white', fontSize: screenWidth < 1150 ? "35px" : "110px"}}
+                style={{
+                  color: "white",
+                  fontSize: screenWidth < 1200 ? "35px" : "110px",
+                }}
               />
             </div>
           </div>

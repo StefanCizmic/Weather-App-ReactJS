@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
-import "./WeeklyDays.css";
+import "./WeekDays.css";
 import { WeatherContext } from "../Weather/Weather";
 import { daysOrder } from "../../Util/getDays";
 import { weeklyDays } from "../../Data/weeklyDays";
 
-const WeeklyDays = ({ setDailyTemp }) => {
+const WeekDays = ({ setDailyTemp }) => {
   const weather = useContext(WeatherContext);
   const [weekDays, setWeekDays] = useState([]);
-  const weeklyData = weeklyDays(weekDays, weather);
+  const weekData = weeklyDays(weekDays, weather);
 
   useEffect(() => {
     const getDaysOrder = daysOrder(weather);
@@ -17,19 +17,19 @@ const WeeklyDays = ({ setDailyTemp }) => {
   }, [weather]);
 
   return (
-    <div className="weeklyContainer">
-      {weeklyData.map((item) => (
+    <div className="week-days">
+      {weekData.map((item) => (
         <div
           className="days"
           id={item.id}
           onClick={() => setDailyTemp(item.data)}
         >
           <p className="day">{item.name}</p>
-          <div className="dayImg">{item.icon}</div>
+          <div className="day-img">{item.icon}</div>
         </div>
       ))}
     </div>
   );
 };
 
-export default WeeklyDays;
+export default WeekDays;

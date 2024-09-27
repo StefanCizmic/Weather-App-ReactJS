@@ -1,10 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import SidebarLayout from "../SidebarLayout/SidebarLayout";
 import "./Location.css";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import { Icon } from "leaflet";
-import arcades from "./arcades.json";
 
 const Location = ({ currentLocation }) => {
   const customIcon = new Icon({
@@ -30,7 +29,7 @@ const Location = ({ currentLocation }) => {
           />
         </MapContainer>
       ) : (
-        <div className="errorMessage">
+        <div className="location-error-message">
           <h2>Error</h2>
           <p>Failed to load map. Please allow access to your location</p>
         </div>

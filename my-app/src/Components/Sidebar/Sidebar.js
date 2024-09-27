@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
-import {sidebar} from '../../Data/sidebar';
+import { sidebar } from "../../Data/sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,9 +9,9 @@ const Sidebar = ({ setCardIsOpen }) => {
   const sidebarData = sidebar();
   return (
     <div className={isOpen ? "sidebar open" : "sidebar"}>
-      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+      <div className="hamburger-menu" onClick={() => setIsOpen(!isOpen)}>
         <FontAwesomeIcon icon={faBars} />
-        <ul className={isOpen ? "listsOpen" : "lists"}>
+        <ul className={isOpen ? "lists open" : "lists"}>
           <li onClick={() => setCardIsOpen("searchCard")}>Home</li>
           <li onClick={() => setCardIsOpen("locationCard")}>Location</li>
           <li onClick={() => setCardIsOpen("settingsCard")}>Settings</li>
@@ -20,14 +20,14 @@ const Sidebar = ({ setCardIsOpen }) => {
       </div>
       {sidebarData.map((item) => (
         <div
-          className="sidebarItem"
+          className="sidebar-item"
           key={item.id}
           onClick={() => setCardIsOpen(item.openCard)}
         >
           <div>
             <FontAwesomeIcon icon={item.icon} />
           </div>
-          <p className="itemDescription">{item.description}</p>
+          <p className="item-description">{item.description}</p>
         </div>
       ))}
     </div>

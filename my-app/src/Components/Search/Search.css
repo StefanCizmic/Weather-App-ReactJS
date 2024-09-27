@@ -1,16 +1,16 @@
-.inputDiv {
+.search-input-container {
   width: 550px;
   height: 220px;
 }
 
-.input {
+.search-input {
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: end;
 }
 
-.input input {
+.search-input input {
   width: 545px;
   height: 30px;
   outline: 0px;
@@ -18,7 +18,7 @@
   padding-left: 10px;
 }
 
-.inputDiv .animation {
+.search-input-container .animation {
   animation-name: inputSpread;
   animation-duration: 1.3s;
   animation-timing-function: ease-in-out;
@@ -33,18 +33,18 @@
   }
 }
 
-.filteredDiv {
+.filtered-cities-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.filteredCities {
+.filtered-cities {
   margin-top: 10px;
 }
 
-.filteredCities div {
+.filtered-cities div {
   width: 540px;
   font-size: 15px;
   display: flex;
@@ -54,48 +54,36 @@
   padding: 3px;
 }
 
-.filteredCities div:hover {
+.filtered-cities div:hover {
   color: rgba(255, 255, 255, 1);
   background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
-  .inputDiv {
+  .search-input-container {
     width: 320px;
     height: 230px;
   }
-  .filteredCities div,
-  .input input {
-    width: 350px;
+  .filtered-cities div,
+  .search-input input {
+    width: 320px;
   }
-  .filteredCities div{
+  .filtered-cities div{
     font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .inputDiv {
+  .search-input-container {
     width: 210px;
   }
-  .filteredCities div,
-  .input input {
+  .filtered-cities div,
+  .search-input input {
     width: 210px;
   }
-  .filteredCities div{
+  .filtered-cities div{
     font-size: 14px;
   }
 }
 
-/* @media (max-width: 400px) {
-  .inputDiv {
-    width: 160px;
-  }
-  .filteredCities div,
-  .input input {
-    width: 160px;
-  }
-  .filteredCities div{
-    font-size: 14px;
-  }
-}  */

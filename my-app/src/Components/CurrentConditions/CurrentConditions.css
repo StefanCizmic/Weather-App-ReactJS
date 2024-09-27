@@ -1,4 +1,4 @@
-.currentConditions {
+.current-conditions {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -24,7 +24,7 @@
   border: 1px solid rgba(0, 0, 0, 0.55);
 }
 
-.conditionsLogo {
+.conditions-logo {
   display: flex;
   justify-content: center;
   align-items: end;

@@ -8,10 +8,10 @@ const CurrentConditions = () => {
   const weather = useContext(WeatherContext)
   const conditionsData = currentConditions(weather);
   return (
-    <div className="currentConditions">
+    <div className="current-conditions">
       {conditionsData.map((item) => (
         <div className="conditions" key={item.name}>
-          <div className="conditionsLogo">
+          <div className="conditions-logo">
             <FontAwesomeIcon
               icon={item.icon}
               style={{ color: "white", width: "25px", height: "25px" }}

@@ -1,10 +1,10 @@
-.dateAndPlace {
+.date-place {
   display: grid;
   grid-template-rows: 1.5fr 1.7fr;
   padding-top: 7px;
 }
 
-.dateAndPlace .cityAndCountry {
+.date-place .place {
   display: flex;
   align-items: center;
   color: #fff;
@@ -12,7 +12,7 @@
   margin-left: 15px;
 }
 
-.cityAndCountry span {
+.place span {
   color: #000;
   background-color: #48aaad;
   padding: 2px;

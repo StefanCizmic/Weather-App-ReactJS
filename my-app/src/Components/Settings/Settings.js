@@ -6,9 +6,9 @@ const Settings = ({setUnits, setCardIsOpen}) => {
   
   return (
     <SidebarLayout>
-      <div className="settingsContainer">
+      <div className="settings">
         <h2>Set units:</h2>
-        <div className="unitButtons">
+        <div className="settings-buttons">
         <button onClick={() => setUnits('imperial') || setCardIsOpen('searchCard')}>Imperial</button>
         <button onClick={() => setUnits('metric') || setCardIsOpen('searchCard')}>Metric</button>
         </div>

@@ -1,15 +1,15 @@
-
 import React from "react";
 import "./WeeklyForecast.css";
 
-const WeeklyForecast = ({dailyTemp, measurement}) => {
-
+const WeeklyForecast = ({ dailyTemp, measurement }) => {
   return (
-    <div className="weekForecast">
-      <div className="forecastLeft">
+    <div className="weekly-forecast">
+      <div className="weekly-left">
         <div>
           <p>Max. Temperature</p>
-          <p>{dailyTemp?.maxTemp} {measurement}</p>
+          <p>
+            {dailyTemp?.maxTemp} {measurement}
+          </p>
         </div>
         <div>
           <p>Wind</p>
@@ -20,10 +20,12 @@ const WeeklyForecast = ({dailyTemp, measurement}) => {
           <p>{dailyTemp.pressure}mb</p>
         </div>
       </div>
-      <div className="forecastRight">
+      <div className="weekly-right">
         <div>
           <p>Min. Temperature</p>
-          <p>{dailyTemp?.minTemp} {measurement}</p>
+          <p>
+            {dailyTemp?.minTemp} {measurement}
+          </p>
         </div>
         <div>
           <p>Cloud cover</p>

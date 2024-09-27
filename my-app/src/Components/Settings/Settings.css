@@ -1,4 +1,4 @@
-.settingsContainer {
+.settings {
   width: 400px;
   height: 250px;
   padding: 50px 45px;
@@ -9,18 +9,18 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.settingsContainer h2 {
+.settings h2 {
   text-align: center;
   font-weight: 300;
   margin-bottom: 40px;
 }
 
-.unitButtons {
+.settings-buttons {
   display: flex;
   justify-content: space-around;
 }
 
-.unitButtons button {
+.settings-buttons button {
   width: 110px;
   height: 50px;
   font-size: 18px;
@@ -34,38 +34,38 @@
   transition: all 0.3s ease-in-out;
 }
 
-.unitButtons button:hover {
+.settings-buttons button:hover {
   background-color: #acd8a5;
   color: #595959;
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  .settingsContainer {
+  .settings {
     width: 360px;
     height: 250px;
   }
-  .settingsContainer h2 {
+  .settings h2 {
     font-size: 18px;
   }
-  .unitButtons button {
+  .settings-buttons button {
     width: 90px;
     font-size: 15px;
   }
 }
 
 @media (min-width: 401px) and (max-width: 480px) {
-  .settingsContainer {
+  .settings {
     width: 260px;
     height: 170px;
   }
-  .settingsContainer h2 {
+  .settings h2 {
     font-size: 15px;
     margin-top: -15px;
   }
-  .unitButtons {
+  .settings-buttons {
     margin-top: -10px;
   }
-  .unitButtons button {
+  .settings-buttons button {
     width: 65px;
     height: 35px;
     font-size: 10px;
@@ -73,19 +73,19 @@
 }
 
 @media (max-width: 400px) {
-  .settingsContainer {
+  .settings {
     padding-top: 20px;
     width: 180px;
     height: 140px;
   }
-  .settingsContainer h2 {
+  .settings h2 {
     font-size: 13px;
     margin-top: 8px;
   }
-  .unitButtons {
+  .settings-buttons {
     margin-top: -16px;
   }
-  .unitButtons button {
+  .settings-buttons button {
     width: 70px;
     height: 30px;
     font-size: 7px;

@@ -11,12 +11,12 @@ const ForecastByHour = ({measurement }) => {
   const dataByHour = forecastByHour(weather, hours);
 
   return (
-    <div className="forecastByHour">
+    <div className="forecast-by-hour">
       {dataByHour.map((item) => (
-        <div className="byHour" key={item.id}>
+        <div className="by-hour" key={item.id}>
           <div className="hours">{item.time}:00</div>
-          <div className="hoursImg">{item.icon}</div>
-          <div className="hoursTemp">
+          <div className="hours-img">{item.icon}</div>
+          <div>
             {item.temperature}
             {measurement}
           </div>

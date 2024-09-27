@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import "./Search.css";
 import { useScreenWidth } from "../../Hooks/useScreenWidth";
 import { getWeather } from "../../Util/Fetch/getWeather";
-import { getFilteredCities } from '../../Util/getFilteredCities';
-import "./Search.css";
+import { getFilteredCities } from "../../Util/getFilteredCities";
 
 const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
   const [filteredCities, setFilteredCities] = useState([]);
@@ -11,7 +11,7 @@ const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
 
   const inputHandler = (e) => {
     const typedText = e.target.value.toLowerCase();
-    getFilteredCities(typedText, setFilteredCities, screenWidth); 
+    getFilteredCities(typedText, setFilteredCities, screenWidth);
   };
 
   const handleSearch = async (coordinates) => {
@@ -26,17 +26,16 @@ const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
     const input = inputRef.current;
     if (input) {
       input.classList.add("animation");
-      if (screenWidth > 768) { 
+      if (screenWidth > 768) {
         input.focus();
       }
     }
-  }, [screenWidth]); 
+  }, [screenWidth]);
 
   return (
-    <div className="inputDiv">
-      <div className="input">
+    <div className="search-input-container">
+      <div className="search-input">
         <input
-          className="inputSearch"
           type="text"
           placeholder="type city"
           ref={inputRef}
@@ -46,7 +45,8 @@ const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
               ? handleSearch({
                   latitude: filteredCities[0].lat,
                   longitude: filteredCities[0].lng,
-                }) && setCity({
+                }) &&
+                setCity({
                   city: filteredCities[0].name,
                   country: filteredCities[0].country,
                 })
@@ -54,8 +54,8 @@ const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
           }
         />
       </div>
-      <div className="filteredDiv">
-        <div className="filteredCities">
+      <div className="filtered-cities-container">
+        <div className="filtered-cities">
           {filteredCities.map((city) => (
             <div
               onClick={() => {

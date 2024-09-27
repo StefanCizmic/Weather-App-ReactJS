@@ -1,4 +1,4 @@
-.currentForecast {
+.current-forecast {
   backdrop-filter: saturate(80%) blur(7px);
   background: rgba(0, 0, 0, 0.55);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3rem 0px;
@@ -12,14 +12,14 @@
   grid-template-rows: 3fr 2fr;
 }
 
-.cloudsAndTemperature {
+.clouds-temperature {
   display: flex;
   justify-content: space-between;
   align-items: end;
   padding: 0px 25px 0px 33px;
 }
 
-.cloudsIcon {
+.clouds-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@
   }
 }
 
-.skyVisibility {
+.sky-visibility {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -40,12 +40,12 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-.currentTemperature {
+.current-temperature {
   display: grid;
   grid-template-rows: 4fr 1fr;
 }
 
-.currentTemperature .temperature {
+.current-temperature .temperature {
   display: flex;
   justify-content: center;
   align-items: end;
@@ -54,7 +54,7 @@
   color: #fff;
 }
 
-.currentTemperature .feelsLike {
+.current-temperature .feels-like {
   display: flex;
   justify-content: center;
   align-items: top;
@@ -62,17 +62,17 @@
   font-style: italic;
 }
 
-.currentTemperature .feelsLike p {
+.current-temperature .feels-like p {
   animation: fadeIn 1.9s ease-in-out;
   color: #1e1e1e;
 }
 
-.currentResponsive {
+/* .current-forecast-responsive {
   display: none;
-}
+} */
 
-@media (max-width: 768px) {
-  .currentForecast {
+/* @media (max-width: 768px) {
+  .current-forecast {
     display: block;
     height: 180px;
     box-shadow: none;
@@ -80,8 +80,8 @@
   }
   .cloudsAndTemperature, .skyVisibility {
     display: none;
-  }
-  .currentResponsive {
+  } */
+  /* .current-forecast-responsive {
     display: grid;
     grid-template-rows: none;
     grid-template-columns: 0.9fr 1fr;
@@ -90,8 +90,8 @@
     padding-top: 25px;
     padding-right: 30px;
     padding-left: 30px;
-  }
-  .responsiveTemp {
+  } */
+  /* .responsiveTemp {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
   }
@@ -118,8 +118,8 @@
   .cloudsResponsive {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-  }
-  .cloudsOne {
+  } */
+  /* .cloudsOne {
     display: flex;
     justify-content: end;
   }
@@ -136,4 +136,4 @@
       height: 85%;
     }
   }
-}
+} */

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-.weatherCard {
+.weather {
   width: 950px;
   height: 550px;
   outline: none;
@@ -12,17 +12,17 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.weatherDataContainer,
-.weatherIconsContainer {
+.weather-data,
+.weather-icons {
   display: grid;
   grid-template-columns: 2fr 3.5fr;
   column-gap: 35px;
 }
 
 .time,
-.dateAndPlace,
-.weekForecast,
-.forecastByHour {
+.date-place,
+.weekly-forecast,
+.forecast-by-hour {
   backdrop-filter: saturate(80%) blur(7px);
   background: rgba(0, 0, 0, 0.55);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3rem 0px;
@@ -30,30 +30,24 @@
   border: 0px solid white;
 }
 
-.weatherDataRight {
+.weather-data-right {
   display: grid;
   grid-template-rows: 2fr 3fr;
   row-gap: 20px;
 }
 
-.locationInfo {
+.location-info {
   display: grid;
   grid-template-columns: 2fr 8fr;
   column-gap: 35px;
 }
 
-   /* width: 200px;
-    height: 300px; */
-    /* margin-left: -300px; */
-    /* margin-left: 50px;
-    margin-bottom: 250px; */
-
-@media (max-width: 768px) {
-  .weatherCard {
+/* @media (max-width: 768px) {
+  .weather {
     width: 100%;
  
   }
-  .weatherDataContainer {
+  .weather-data {
     display: grid;
     height: 400px;
     grid-template-columns: none;
@@ -65,22 +59,22 @@
 }
 
 @media (max-width: 768px) {
-  .weatherCard {
+  .weather {
     justify-self: start;
   }
-  .weatherDataContainer {
+  .weather-data {
     justify-self: center;
   }
-  .currentForecast, .weatherDataRight {
+  .currentForecast, .weather-data-right {
     width: 600px;
   }
   .locationInfo {
     display: none;
   }
-  .weatherDataRight, .weatherIconsContainer {
+  .weather-data-right, .weatherIconsContainer {
     display: none;
   }
   .forecastByHour {
     visibility: hidden;
   }
-}
+} */

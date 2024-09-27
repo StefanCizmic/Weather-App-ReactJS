@@ -1,20 +1,20 @@
-.forecastByHour {
+.forecast-by-hour {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.byHour {
+.by-hour {
 text-align: center;
 border-right: 1px solid rgba(255, 255, 255, 0.7);
 padding: 11px;
 }
 
-.byHours:nth-child(13) {
+/* .hours:nth-child(13) {
   border: none;
-}
+} */
 
-.hoursImg {
+.hours-img {
     width: 50px;
     height: 30px;
     margin: 8px 0px 8px 0px;

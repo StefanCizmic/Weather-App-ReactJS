@@ -4,7 +4,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <div id="rootDiv">
+    <div id="root-div">
       <Home />
     </div>
   );
