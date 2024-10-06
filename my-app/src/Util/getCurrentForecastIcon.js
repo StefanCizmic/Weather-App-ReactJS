@@ -28,14 +28,14 @@ export const currentForecastIcon = (weather) => {
       case "Clouds":
         return <img src={cloudsIcon} alt="cloudsIcon" />;
         break;
-      case "Rain" && "Drizzle" && 'Thunderstorm':
-        return <img src={rainIcon} alt="cloudsIcon" />;
+      case "Rain" || "Drizzle" || 'Thunderstorm':
+        return <img src={rainIcon} alt="rainIcon" />;
         break;
       case "Snow":
-        return <img src={snowIcon} alt="cloudsIcon" />;
+        return <img src={snowIcon} alt="snowIcon" />;
         break;
-      case "Haze" && "Mist":
-        return <img src={mistIcon} alt="cloudsIcon" />;
+      case "Haze" || "Mist":
+        return <img src={mistIcon} alt="mistIcon" />;
         break;
       default:
         break;

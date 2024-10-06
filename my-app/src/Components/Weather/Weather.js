@@ -19,6 +19,8 @@ const Weather = ({ weather, city, measurement }) => {
     localDateTime(weather?.timezone_offset);
   }, []);
 
+  console.log(weather);
+
   return (
     <div>
       <WeatherContext.Provider value={weather}>
