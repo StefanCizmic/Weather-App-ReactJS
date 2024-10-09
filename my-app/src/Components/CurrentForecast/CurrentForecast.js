@@ -11,42 +11,10 @@ const CurrentForecast = ({ measurement, city }) => {
 
   return (
     <div className="current-forecast">
-      {/* <div className="current-forecast-responsive">
-        <div className="responsive-temperature">
-          <div className="temp">
-            <p>
-              {city.city}, {city.country}
-            </p>
-            <p className="responstemp">
-              {Math.round(weather?.current?.temp)}
-              {measurement}
-            </p>
-            <p className="responsiveFeelsLike">
-              = feels like: {Math.round(weather?.current?.feels_like)}
-              {measurement}
-            </p>
-          </div>
-          <div className="responsVisibility">
-          <p>{weather?.current?.weather[0]?.description}</p>
-        <p>/</p>
-        <p>visibility: {weather?.current?.visibility / 1000}km</p>
-          </div>
-        </div>
-        <div className="cloudsResponsive">
-          <div className="cloudsOne">
-            <div className="cloudsRespIcon">
-            {currentForecastIcon(weather) || null}
-            </div>
-          </div>
-          <div className="cloudsTwo">
-            <p>{currentDay}, {currentDate}</p>
-          </div>
-          <div></div>
-        </div>
-      </div> */}
       <div className="clouds-temperature">
         <div className="clouds-icon">
           {currentForecastIcon(weather) || null}
+          <p className="city-responsive">{city.city}, {city.country}</p>
         </div>
         <div className="current-temperature">
           <div className="temperature">
@@ -65,7 +33,7 @@ const CurrentForecast = ({ measurement, city }) => {
       </div>
       <div className="sky-visibility">
         <p>{weather?.current?.weather[0]?.description}</p>
-        <p>/</p>
+        {/* <p>/</p> */}
         <p>visibility: {weather?.current?.visibility / 1000}km</p>
       </div>
     </div>

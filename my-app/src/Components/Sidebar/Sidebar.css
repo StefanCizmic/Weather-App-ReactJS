@@ -63,26 +63,6 @@
   color: #acd8a7;
 }
 
-@media (min-width: 769px) and (max-width: 1150px) {
-  .sidebar {
-    width: 90px;
-    background: rgba(0, 0, 0, 0);
-  }
-  .sidebar:hover {
-    width: 90px;
-  }
-  .sidebar.open {
-    width: 130px;
-  }
-  .hamburger-menu {
-    visibility: visible;
-    left: 25px;
-  }
-  .sidebar-item {
-    visibility: hidden;
-  }
-}
-
 @media (min-width: 481px) and (max-width: 768px) {
   .sidebar {
     width: 65px;

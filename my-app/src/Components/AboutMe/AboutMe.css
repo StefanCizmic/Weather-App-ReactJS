@@ -43,7 +43,7 @@
   background: RGBA(10, 102, 194, 0.95)
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .about {
     width: 100%;
     display: flex;

@@ -4,7 +4,7 @@ import { forecastByHour } from "../../Data/forecastByHour";
 import {WeatherContext} from '../Weather/Weather';
 import { hoursOrder } from "../../Util/getHours";
 
-const ForecastByHour = ({measurement }) => {
+const ForecastByHour = ({measurement}) => {
   
   const weather = useContext(WeatherContext);
   const hours = hoursOrder(weather?.timezone_offset);

@@ -10,4 +10,8 @@
     font-size: 19px;
   }
 
-  
+  @media (max-width: 768px) {
+    .time {
+      display: none;
+    }
+  }

@@ -28,4 +28,8 @@
   position: relative;
 }
 
-
+@media (max-width: 768px) {
+  .date-place {
+    display: none;
+  }
+}

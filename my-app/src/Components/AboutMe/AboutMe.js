@@ -25,7 +25,7 @@ const AboutMe = () => {
                 icon={item.icon}
                 style={{
                   color: "white",
-                  fontSize: screenWidth < 1200 ? "35px" : "110px",
+                  fontSize: screenWidth < 768 ? "35px" : "110px",
                 }}
               />
             </div>

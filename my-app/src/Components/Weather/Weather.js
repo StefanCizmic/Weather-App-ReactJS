@@ -19,8 +19,6 @@ const Weather = ({ weather, city, measurement }) => {
     localDateTime(weather?.timezone_offset);
   }, []);
 
-  console.log(weather);
-
   return (
     <div>
       <WeatherContext.Provider value={weather}>
@@ -39,7 +37,7 @@ const Weather = ({ weather, city, measurement }) => {
             <CurrentConditions />
             <WeekDays setDailyTemp={setDailyTemp} />
           </div>
-          <ForecastByHour measurement={measurement} />
+          <ForecastByHour measurement={measurement}/>
         </div>
       </WeatherContext.Provider>
     </div>

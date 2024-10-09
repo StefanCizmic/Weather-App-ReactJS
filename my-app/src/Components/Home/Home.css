@@ -21,7 +21,7 @@
     visibility: hidden;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1154px) {
     .search {
       width: 100%;
     }

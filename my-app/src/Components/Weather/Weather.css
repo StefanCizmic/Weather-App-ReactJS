@@ -42,39 +42,47 @@
   column-gap: 35px;
 }
 
-/* @media (max-width: 768px) {
-  .weather {
-    width: 100%;
- 
-  }
-  .weather-data {
-    display: grid;
-    height: 400px;
-    grid-template-columns: none;
-    grid-template-rows: 1fr 0.5fr;
-  }
-  .locationInfo {
-    display: none;
-  }
+.weather-responsive {
+  display: none;
 }
 
 @media (max-width: 768px) {
   .weather {
-    justify-self: start;
+    display: flex;
+    flex-direction: column;
   }
   .weather-data {
-    justify-self: center;
+    display: block;
+    color: #000;
   }
-  .currentForecast, .weather-data-right {
-    width: 600px;
-  }
-  .locationInfo {
+  .weather-data-right {
     display: none;
   }
-  .weather-data-right, .weatherIconsContainer {
+  .weather-icons .current-conditions {
     display: none;
   }
-  .forecastByHour {
-    visibility: hidden;
+}
+
+@media (min-width: 550px) and (max-width: 768px) {
+  .weather {
+   width: 380px;
   }
-} */
+}
+
+@media (min-width: 481px) and (max-width: 549px) {
+  .weather {
+    width: 300px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 480px) {
+  .weather {
+    width: 250px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+  .weather {
+    width: 200px;
+  }
+}
