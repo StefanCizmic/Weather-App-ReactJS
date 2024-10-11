@@ -22,6 +22,18 @@
   margin-top: 15px;
 }
 
+@media (min-width: 769px) and (max-width: 1150px) {
+  .leaflet-container {
+    width: 500px;
+    height: 300px;
+  }
+  .location-error-message {
+    width: 370px;
+    height: 210px;
+    font-size: 13.5px;
+  }
+}
+
 @media (min-width: 481px) and (max-width: 768px) {
   .leaflet-container {
     width: 360px;

@@ -46,7 +46,7 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
   .weather {
     display: flex;
     flex-direction: column;
@@ -63,11 +63,17 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1150px) {
+  .weather {
+    width: 470px;
+  }
+}
+
 @media (min-width: 550px) and (max-width: 768px) {
   .weather {
    width: 380px;
   }
-}
+} 
 
 @media (min-width: 481px) and (max-width: 549px) {
   .weather {
@@ -85,4 +91,4 @@
   .weather {
     width: 200px;
   }
-}
+} 

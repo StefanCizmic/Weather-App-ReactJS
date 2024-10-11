@@ -26,14 +26,14 @@ const WeekDays = ({ setDailyTemp }) => {
           className="days"
           id={item.id}
           onClick={() => {
-            if (screenWidth > 768) {
+            if (screenWidth > 1150) {
               setDailyTemp(item.data);
             }
           }}
         >
           <p className="day">{item.name}</p>
           <div className="day-img">{item.icon}</div>
-          {screenWidth <= 768 && (
+          {screenWidth <= 1150 && (
             <div className="responsive-temps">
               <div className="day-img-responsive">{item.icon}</div>
               <p>Max: {dailyForecast(weather, index).maxTemp}°</p>

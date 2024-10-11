@@ -70,16 +70,19 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
   .current-forecast {
     background: rgba(255, 255, 255, 0.65);
-    border-radius: 0;
+    border-radius: 10px;
   }
   .city-responsive {
     display: block;
   }
   .clouds-icon img {
     display: none;
+  }
+  .clouds-icon p {
+    text-align: start;
   }
   .current-temperature .temperature {
     color: #000;
@@ -95,34 +98,74 @@
   }
 }
 
-@media (min-width: 550px) and (max-width: 768px) {
-  .city-responsive {
-    font-size: 19px;
+@media (min-width: 769px) and (max-width: 1150px) {
+  .current-temperature .temperature {
+    font-size: 35px;
+    margin-bottom: 12px;
   }
-  .sky-visibility {
-    font-size: 16px;
+  .current-temperature .temperature {
+    margin-bottom: 16px;
+    margin-right: 8px;
+  }
+  .city-responsive {
+    margin-left: -2px;
+    margin-top: 5px;
   }
 }
 
-@media (min-width: 400px) and (max-width: 549px) {
+@media (min-width: 550px) and (max-width: 768px) {
+  .city-responsive {
+    margin-left: -2.5px;
+    margin-top: 4px;
+  }
   .current-temperature .temperature {
-    font-size: 28px;
-    margin-bottom: 22px;
+    font-size: 32px;
+    margin-bottom: 16px;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 549px) {
+  .city-responsive {
+    font-size: 14px;
+    margin-left: -15px;
+  }
+  .current-temperature .temperature {
+    font-size: 22px;
+    margin-bottom: 24px;
+    margin-right: 12px;
   }
   .sky-visibility {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 480px) {
+  .city-responsive {
     font-size: 13px;
+    margin-left: -32px;
+  }
+  .current-temperature .temperature {
+    font-size: 19px;
+    margin-bottom: 26px;
+    margin-right: 2.5px;
+  }
+  .sky-visibility {
+    font-size: 12px;
   }
 }
 
 @media (min-width: 300px) and (max-width: 399px) {
   .city-responsive {
-    font-size: 14px;
+    font-size: 11px;
+    margin-left: -60px;
   }
   .current-temperature .temperature {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 15px;
+    margin-bottom: 28.5px;
+    margin-right: -4px;
   }
   .sky-visibility {
-    font-size: 11px;
+    font-size: 9px;
   }
 }

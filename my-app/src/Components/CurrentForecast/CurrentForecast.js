@@ -2,13 +2,9 @@ import React, { useContext } from "react";
 import "./CurrentForecast.css";
 import { currentForecastIcon } from "../../Util/getCurrentForecastIcon";
 import { WeatherContext } from "../Weather/Weather";
-// import { localDateTime } from '../../Util/getLocalDateTime';
 
 const CurrentForecast = ({ measurement, city }) => {
   const weather = useContext(WeatherContext);
-  // const currentDate = localDateTime(weather?.timezone_offset).date;
-  // const currentDay = localDateTime(weather?.timezone_offset).day;
-
   return (
     <div className="current-forecast">
       <div className="clouds-temperature">
