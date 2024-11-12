@@ -9,7 +9,7 @@ const Time = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const localTime = localDateTime(weather?.timezone_offset).time;
+      const localTime = localDateTime(weather?.timezone).time;
       setLocal(localTime);
     }, 1000);
     return () => clearInterval(intervalId);

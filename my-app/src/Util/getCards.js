@@ -5,7 +5,7 @@ import Location from '../Components/Location/Location';
 import Settings from '../Components/Settings/Settings';
 import AboutMe from '../Components/AboutMe/AboutMe';
 
-export const getCards = ({ setData, setCity, setCardIsOpen, currentLocation, data, city, setUnits, units, setMeasurement, measurement }) => {
+export const getCards = ({ setData, setWeeklyWeather, setCity, setCardIsOpen, currentLocation, data, weeklyWeather, city, setUnits, units, setMeasurement, measurement }) => {
         const locationCard = <Location currentLocation={currentLocation} />;
         const settingsCard = (
           <Settings
@@ -15,10 +15,11 @@ export const getCards = ({ setData, setCity, setCardIsOpen, currentLocation, dat
           />
         );
         const aboutMeCard = <AboutMe />;
-        const weatherCard = <Weather weather={data} city={city} measurement={measurement} />;
+        const weatherCard = <Weather weather={data} weeklyWeather={weeklyWeather} city={city} measurement={measurement} />;
         const searchCard = (
           <Search
             setWeather={setData}
+            setWeeklyWeather={setWeeklyWeather}
             setCity={setCity}
             setCardIsOpen={setCardIsOpen}
             units={units}

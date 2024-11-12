@@ -5,8 +5,8 @@ import "./DateAndPlace.css";
 
 const DateAndPlace = ({ city }) => {
   const weather = useContext(WeatherContext);
-  const currentDate = localDateTime(weather?.timezone_offset).date;
-  const currentDay = localDateTime(weather?.timezone_offset).day;
+  const currentDate = localDateTime(weather?.timezone).date;
+  const currentDay = localDateTime(weather?.timezone).day;
 
   return (
     <div className="date-place">

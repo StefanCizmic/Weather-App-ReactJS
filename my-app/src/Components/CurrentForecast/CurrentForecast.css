@@ -9,6 +9,7 @@
   );
   display: grid;
   grid-template-rows: 3fr 2fr;
+  /* user-select: none; */
 }
 
 .clouds-temperature {

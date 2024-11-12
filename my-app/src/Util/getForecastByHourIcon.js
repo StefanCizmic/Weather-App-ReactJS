@@ -4,11 +4,8 @@ import rainIcon from "../Images/Icons/rainIcon.png";
 import snowIcon from "../Images/Icons/snowIcon.png";
 import mistIcon from "../Images/Icons/mistIcon.png";
 
-export const forecastByHourIcon = (weather, hour) => {
-  
-  const condition = weather?.hourly[hour].weather[0]?.main;
-
-  switch (condition) {
+export const forecastByHourIcon = (weather) => {
+  switch (weather) {
     case "Clear":
       return <img src={sunIcon} alt="sunIcon" />;
       break;

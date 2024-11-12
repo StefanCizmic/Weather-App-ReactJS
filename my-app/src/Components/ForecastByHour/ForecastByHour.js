@@ -1,27 +1,25 @@
-import React, {useContext} from "react";
+import React from "react";
 import "./ForecastByHour.css";
-import { forecastByHour } from "../../Data/forecastByHour";
-import {WeatherContext} from '../Weather/Weather';
-import { hoursOrder } from "../../Util/getHours";
+import { forecastByHourIcon } from "../../Util/getForecastByHourIcon";
 
-const ForecastByHour = ({measurement}) => {
-  
-  const weather = useContext(WeatherContext);
-  const hours = hoursOrder(weather?.timezone_offset);
-  const dataByHour = forecastByHour(weather, hours);
-
+const ForecastByHour = ({ weeklyWeather, measurement }) => {
   return (
     <div className="forecast-by-hour">
-      {dataByHour.map((item) => (
-        <div className="by-hour" key={item.id}>
-          <div className="hours">{item.time}:00</div>
-          <div className="hours-img">{item.icon}</div>
-          <div>
-            {item.temperature}
-            {measurement}
+      {weeklyWeather.list.slice(0, 11).map((item) => {
+        const date = new Date(item.dt_txt);
+        const hours = date.getHours().toString().padStart(2, "0") + ":00";
+        const icon = forecastByHourIcon(item.weather[0].main);
+        return (
+          <div className="by-hour" key={item.id}>
+            <div className="hours">{hours}</div>
+            <div className="hours-img">{icon}</div>
+            <div>
+              {Math.round(item.main.temp)}
+              {measurement}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };

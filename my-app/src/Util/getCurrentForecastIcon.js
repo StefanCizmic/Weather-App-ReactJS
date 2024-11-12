@@ -9,14 +9,14 @@ import mistIcon from "../Images/Icons/mistIcon.png";
 
 export const currentForecastIcon = (weather) => {
   
-  const local = localDateTime(weather.timezone_offset).dateTime;
+  const local = localDateTime(weather?.timezone).dateTime;
   const currentTime = local.getHours() * 60 + local.getMinutes();
 
   const calculate = unixTimestamp(weather);
   const sunrise = calculate.sunrise;
   const sunset = calculate.sunset;
 
-  const weatherCondition = weather?.current?.weather[0]?.main;
+  const weatherCondition = weather?.weather[0]?.main;
 
   if (currentTime <= sunrise || currentTime >= sunset) {
     return <img src={moonIcon} alt="moonIcon" />;

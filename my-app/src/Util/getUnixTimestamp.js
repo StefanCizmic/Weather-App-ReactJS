@@ -6,8 +6,8 @@ export const unixTimestamp = (data) => {
   const currentMinutes = currentTime.getMinutes();
 
   const timestamp = {
-    sunrise: data.current.sunrise,
-    sunset: data.current.sunset,
+    sunrise: data.sys.sunrise,
+    sunset: data.sys.sunset,
   };
 
   const sunriseHours = new Date(timestamp.sunrise * 1000).getHours();

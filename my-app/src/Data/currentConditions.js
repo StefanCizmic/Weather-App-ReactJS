@@ -4,19 +4,19 @@ export const currentConditions = (weather) => [
   {
     name: "wind",
     icon: faWind,
-    description: weather?.current?.wind_speed,
+    description: weather?.wind?.speed,
     measurement: "km/h",
   },
   {
     name: "humidity",
     icon: faDroplet,
-    description: weather?.current?.humidity,
+    description: weather?.main?.humidity,
     measurement: "%",
   },
   {
     name: "clouds",
     icon: faCloud,
-    description: weather?.current?.clouds,
+    description: weather?.clouds?.all,
     measurement: "%",
   },
 ];

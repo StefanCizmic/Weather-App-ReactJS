@@ -2,6 +2,7 @@ import React, { useState, useEffect, createContext } from "react";
 import "./Weather.css";
 import { localDateTime } from "../../Util/getLocalDateTime";
 import { dailyForecast } from "../../Util/getDailyForecast";
+import { nista } from "../../Util/nista";
 import CurrentForecast from "../CurrentForecast/CurrentForecast";
 import Time from "../Time/Time";
 import DateAndPlace from "../DateAndPlace/DateAndPlace";
@@ -12,11 +13,14 @@ import ForecastByHour from "../ForecastByHour/ForecastByHour";
 
 export const WeatherContext = createContext();
 
-const Weather = ({ weather, city, measurement }) => {
-  const [dailyTemp, setDailyTemp] = useState(dailyForecast(weather, 0));
-
+const Weather = ({ weather, weeklyWeather, city, measurement }) => {
+  const [jaja, setJaja] = useState([]);
   useEffect(() => {
-    localDateTime(weather?.timezone_offset);
+    localDateTime(weather?.timezone);
+    const e = async () => {
+      const resp = await nista(weeklyWeather);
+      setJaja(resp);
+    };
   }, []);
 
   return (
@@ -30,14 +34,14 @@ const Weather = ({ weather, city, measurement }) => {
                 <Time />
                 <DateAndPlace city={city} />
               </div>
-              <WeeklyForecast dailyTemp={dailyTemp} measurement={measurement} />
+              {/* <WeeklyForecast weeklyWeather={jaja} measurement={measurement} /> */}
             </div>
           </div>
           <div className="weather-icons">
             <CurrentConditions />
-            <WeekDays setDailyTemp={setDailyTemp} />
+            {/* <WeekDays weeklyWeather={weeklyWeather}/> */}
           </div>
-          <ForecastByHour measurement={measurement}/>
+          {/* <ForecastByHour weeklyWeather={weeklyWeather} measurement={measurement}/> */}
         </div>
       </WeatherContext.Provider>
     </div>

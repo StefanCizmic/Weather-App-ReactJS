@@ -2,9 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Search.css";
 import { useScreenWidth } from "../../Hooks/useScreenWidth";
 import { getWeather } from "../../Util/Fetch/getWeather";
+import { getWeeklyWeather } from "../../Util/Fetch/getWeeklyWeather";
 import { getFilteredCities } from "../../Util/getFilteredCities";
 
-const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
+const Search = ({ setWeather, setWeeklyWeather, setCity, setCardIsOpen, units }) => {
   const [filteredCities, setFilteredCities] = useState([]);
   const screenWidth = useScreenWidth();
   const inputRef = useRef(null);
@@ -17,7 +18,9 @@ const Search = ({ setWeather, setCity, setCardIsOpen, units }) => {
   const handleSearch = async (coordinates) => {
     if (coordinates) {
       const weatherData = await getWeather(coordinates, units);
+      const weeklyWeatherData = await getWeeklyWeather(coordinates, units)
       setWeather(weatherData);
+      setWeeklyWeather(weeklyWeatherData);
       setCardIsOpen("weatherCard");
     }
   };

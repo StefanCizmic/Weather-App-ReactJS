@@ -14,7 +14,7 @@ export const getBackgroundImg = (
   sunset,
   current
 ) => {
-  const weatherCondition = data?.current?.weather[0]?.main;
+  const weatherCondition = data?.weather[0]?.main;
 
   if (current < sunrise || current >= sunset) {
     backgroundRef.current.style.backgroundImage = `url(${night})`;
