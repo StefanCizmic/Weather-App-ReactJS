@@ -26,7 +26,13 @@ export const getBackgroundImg = (
       case "Clouds":
         backgroundRef.current.style.backgroundImage = `url(${clouds})`;
         break;
-      case "Rain" || "Light Rain" || "Thunderstorm":
+      case "Rain":
+        backgroundRef.current.style.backgroundImage = `url(${rain})`;
+        break;
+      case "Light Rain":
+        backgroundRef.current.style.backgroundImage = `url(${rain})`;
+        break;
+      case "Thunderstorm":
         backgroundRef.current.style.backgroundImage = `url(${rain})`;
         break;
       case "Snow":
@@ -38,6 +44,9 @@ export const getBackgroundImg = (
       case "Haze":
         backgroundRef.current.style.backgroundImage = `url(${haze})`;
       case "Mist":
+        backgroundRef.current.style.backgroundImage = `url(${mist})`;
+        break;
+      case "Fog":
         backgroundRef.current.style.backgroundImage = `url(${mist})`;
         break;
       default:

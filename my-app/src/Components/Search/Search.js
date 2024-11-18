@@ -5,7 +5,13 @@ import { getWeather } from "../../Util/Fetch/getWeather";
 import { getWeeklyWeather } from "../../Util/Fetch/getWeeklyWeather";
 import { getFilteredCities } from "../../Util/getFilteredCities";
 
-const Search = ({ setWeather, setWeeklyWeather, setCity, setCardIsOpen, units }) => {
+const Search = ({
+  setWeather,
+  setWeeklyWeather,
+  setCity,
+  setCardIsOpen,
+  units,
+}) => {
   const [filteredCities, setFilteredCities] = useState([]);
   const screenWidth = useScreenWidth();
   const inputRef = useRef(null);
@@ -18,7 +24,7 @@ const Search = ({ setWeather, setWeeklyWeather, setCity, setCardIsOpen, units })
   const handleSearch = async (coordinates) => {
     if (coordinates) {
       const weatherData = await getWeather(coordinates, units);
-      const weeklyWeatherData = await getWeeklyWeather(coordinates, units)
+      const weeklyWeatherData = await getWeeklyWeather(coordinates, units);
       setWeather(weatherData);
       setWeeklyWeather(weeklyWeatherData);
       setCardIsOpen("weatherCard");
@@ -58,7 +64,9 @@ const Search = ({ setWeather, setWeeklyWeather, setCity, setCardIsOpen, units })
         />
       </div>
       <div className="filtered-cities-container">
-        <div className="filtered-cities">
+        <div
+          className="filtered-cities"
+        >
           {filteredCities.map((city) => (
             <div
               onClick={() => {

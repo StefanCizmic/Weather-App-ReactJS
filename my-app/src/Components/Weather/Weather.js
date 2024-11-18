@@ -2,7 +2,7 @@ import React, { useState, useEffect, createContext } from "react";
 import "./Weather.css";
 import { localDateTime } from "../../Util/getLocalDateTime";
 import { dailyForecast } from "../../Util/getDailyForecast";
-import { nista } from "../../Util/nista";
+import { getWeekly } from "../../Util/getWeekly";
 import CurrentForecast from "../CurrentForecast/CurrentForecast";
 import Time from "../Time/Time";
 import DateAndPlace from "../DateAndPlace/DateAndPlace";
@@ -14,14 +14,23 @@ import ForecastByHour from "../ForecastByHour/ForecastByHour";
 export const WeatherContext = createContext();
 
 const Weather = ({ weather, weeklyWeather, city, measurement }) => {
-  const [jaja, setJaja] = useState([]);
+  const [weekly, setWeekly] = useState([]);
+  const [showWeekly, setShowWeekly] = useState([]);
   useEffect(() => {
     localDateTime(weather?.timezone);
-    const e = async () => {
-      const resp = await nista(weeklyWeather);
-      setJaja(resp);
+    const weeklyTemp = async () => {
+      const resp = await getWeekly(weeklyWeather);
+      setWeekly(resp);
     };
-  }, []);
+    weeklyTemp();
+  }, [weather?.timezone, weeklyWeather]);
+  useEffect(() => {
+    if (weekly.length > 0) {
+      setShowWeekly(weekly[0]);
+    }
+  }, [weekly]);
+
+  console.log(weekly);
 
   return (
     <div>
@@ -34,14 +43,20 @@ const Weather = ({ weather, weeklyWeather, city, measurement }) => {
                 <Time />
                 <DateAndPlace city={city} />
               </div>
-              {/* <WeeklyForecast weeklyWeather={jaja} measurement={measurement} /> */}
+              <WeeklyForecast
+                showWeekly={showWeekly}
+                measurement={measurement}
+              />
             </div>
           </div>
           <div className="weather-icons">
             <CurrentConditions />
-            {/* <WeekDays weeklyWeather={weeklyWeather}/> */}
+            <WeekDays weekly={weekly} setShowWeekly={setShowWeekly}/>
           </div>
-          {/* <ForecastByHour weeklyWeather={weeklyWeather} measurement={measurement}/> */}
+          <ForecastByHour
+            weeklyWeather={weeklyWeather}
+            measurement={measurement}
+          />
         </div>
       </WeatherContext.Provider>
     </div>

@@ -8,7 +8,6 @@ import snowIcon from "../Images/Icons/snowIcon.png";
 import mistIcon from "../Images/Icons/mistIcon.png";
 
 export const currentForecastIcon = (weather) => {
-  
   const local = localDateTime(weather?.timezone).dateTime;
   const currentTime = local.getHours() * 60 + local.getMinutes();
 
@@ -28,13 +27,19 @@ export const currentForecastIcon = (weather) => {
       case "Clouds":
         return <img src={cloudsIcon} alt="cloudsIcon" />;
         break;
-      case "Rain" || "Drizzle" || 'Thunderstorm':
+      case "Rain" || "Drizzle" || "Thunderstorm":
         return <img src={rainIcon} alt="rainIcon" />;
         break;
       case "Snow":
         return <img src={snowIcon} alt="snowIcon" />;
         break;
-      case "Haze" || "Mist":
+      case "Haze":
+        return <img src={mistIcon} alt="mistIcon" />;
+        break;
+      case "Mist":
+        return <img src={mistIcon} alt="mistIcon" />;
+        break;
+      case "Fog":
         return <img src={mistIcon} alt="mistIcon" />;
         break;
       default:

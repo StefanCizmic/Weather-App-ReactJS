@@ -11,7 +11,7 @@ import { unixTimestamp } from "../../Util/getUnixTimestamp";
 const Home = () => {
   const [city, setCity] = useState({});
   const [data, setData] = useState({});
-  const [weeklyWeather, setWeeklyWeather] = useState({});
+const [weeklyWeather, setWeeklyWeather] = useState([]);
   const [cardIsOpen, setCardIsOpen] = useState("searchCard");
   const [currentLocation, setCurrentLocation] = useState({});
   const [currentTimestamp, setCurrentTimestamp] = useState("");

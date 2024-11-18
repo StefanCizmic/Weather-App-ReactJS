@@ -6,7 +6,7 @@
 
 .week-days .days {
   height: 65px;
-  width: 60px;
+  width: 70px;
   border-radius: 25px;
   backdrop-filter: saturate(80%) blur(7px);
   background: rgba(0, 0, 0, 0.55);
