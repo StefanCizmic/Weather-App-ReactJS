@@ -9,6 +9,7 @@ const WeekDays = ({ weekly, setShowWeekly }) => {
     <div className="week-days">
       {weekly.map((day, index) => (
         <div key={index} className="days" onClick={() => setShowWeekly(day)}>
+          <small>Day</small>
           <p className="day">{day.date}</p>
           {screenWidth <= 1150 && (
             <div className="responsive-temps">
